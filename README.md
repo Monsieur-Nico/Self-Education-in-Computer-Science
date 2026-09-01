@@ -16,8 +16,8 @@ A completely free program to learn computer science course by course
 
 ## Programming Fundamentals (4-6 weeks)
 
-- [Introduction to Python programming language](/Programming%20Fundamentals/introduction_to_python.md)
-- [Control flow statements](/Programming%20Fundamentals/control_flow_statements.md)
+- [Introduction to Python programming language](/programming-fundamentals/introduction_to_python.md)
+- [Control flow statements](/programming-fundamentals/control_flow_statements.md)
 - Data types and structures
 - Functions and modules
 - Input and output operations
