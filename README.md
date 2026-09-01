@@ -18,11 +18,11 @@ A completely free program to learn computer science course by course
 
 - [Introduction to Python programming language](/programming-fundamentals/introduction_to_python.md)
 - [Control flow statements](/programming-fundamentals/control_flow_statements.md)
-- Data types and structures
-- Functions and modules
-- Input and output operations
-- Debugging and error handling
-- Object-oriented programming concepts
+- [Data types and structures](/programming-fundamentals/data_types_and_structures.md)
+- [Functions and modules](/programming-fundamentals/functions_and_modules.md)
+- [Input and output operations](/programming-fundamentals/input_and_output_operations.md)
+- [Debugging and error handling](/programming-fundamentals/debugging_and_error_handling.md)
+- [Object-oriented programming concepts](/programming-fundamentals/object_oriented_programming.md)
 
 **Resources:**
 
