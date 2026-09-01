@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self-Education in Computer Science</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="A completely free program to learn computer science course by course">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* Lock the cover page background to a fixed gradient. Docsify's default
+       coverpage picks a random pastel gradient on every page load (via
+       inline style), which reads as inconsistent rather than intentional -
+       !important is needed to win over that inline style. */
+    .cover.show {
+      background: linear-gradient(to left bottom, hsl(160, 100%, 88%) 0%, hsl(210, 100%, 88%) 100%) !important;
+    }
+
+    .cover-icon {
+      font-size: 4.5rem;
+      line-height: 1;
+      margin: 0 0 0.2em;
+      filter: drop-shadow(0 6px 14px rgba(52, 73, 94, 0.25));
+    }
+
+    .cover-badges {
+      margin: 0.5em 0 1.5em;
+    }
+
+    .cover-badges img {
+      margin: 0 4px;
+      vertical-align: middle;
+    }
+
+    /* Move the closed-state mobile sidebar toggle from the bottom-left to the
+       top-left. Scoped to the theme's own mobile breakpoint (<=768px) and to
+       the closed state (body without .close) only - above that breakpoint
+       the toggle isn't part of the collapsible-sidebar behavior at all, and
+       when the sidebar is open the theme already places the toggle at the
+       bottom so it doesn't sit on top of the search box at the top of the
+       sidebar. */
+    @media screen and (max-width: 768px) {
+      body:not(.close) .sidebar-toggle {
+        top: 0;
+        bottom: auto;
+        padding: 10px 30px 30px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Self-Education in CS',
+      repo: 'Monsieur-Nico/Self-Education-in-Computer-Science',
+      loadSidebar: true,
+      coverpage: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search',
+        noData: 'No results found'
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+</body>
+</html>
