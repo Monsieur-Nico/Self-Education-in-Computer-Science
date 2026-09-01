@@ -214,7 +214,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562185) (Paid)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562184) (Paid)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
