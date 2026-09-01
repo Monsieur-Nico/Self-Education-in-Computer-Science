@@ -2,6 +2,23 @@
 
 A completely free program to learn computer science course by course
 
+## Table of Contents
+
+- [Introduction to Computer Science](#introduction-to-computer-science-1-2-weeks)
+- [Programming Fundamentals](#programming-fundamentals-4-6-weeks)
+- [Data Structures and Algorithms](#data-structures-and-algorithms-12-16-weeks)
+- [Computer Architecture and Systems](#computer-architecture-and-systems-8-12-weeks)
+- [Database Systems](#database-systems-8-12-weeks)
+- [Web Development](#web-development-8-12-weeks)
+- [Software Engineering](#software-engineering-8-12-weeks)
+- [Artificial Intelligence and Machine Learning](#artificial-intelligence-and-machine-learning)
+- [Computer Graphics and Visualization](#computer-graphics-and-visualization-8-12-weeks)
+- [Human-Computer Interaction](#human-computer-interaction-8-12-weeks)
+- [Cybersecurity](#cybersecurity-8-12-weeks)
+- [Software Development Tools](#software-development-tools-4-6-weeks)
+- [Mathematics for Computer Science](#mathematics-for-computer-science-8-12-weeks)
+- [Ethics and Society in Computing](#ethics-and-society-in-computing-8-12-weeks)
+
 ## Introduction to Computer Science (1-2 weeks)
 
 - Overview of computer science
