@@ -33,7 +33,7 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Introduction to Computer Science by Harvard University on edX](https://www.edx.org/course/cs50s-introduction-to-computer-science)
+- [Introduction to Computer Science by Harvard University on edX](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
 - [Codecademy's Learn How to Code Course](https://www.codecademy.com/learn/paths/computer-science)
 
 ## Programming Fundamentals (4-6 weeks)
@@ -49,7 +49,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Python for Everybody by University of Michigan on Coursera](https://www.coursera.org/specializations/python)
-- [Learn Python the Hard Way by Zed Shaw](https://learncodethehardway.org/python/)
+- [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/) (Free, full text online)
 
 ## Data Structures and Algorithms (12-16 weeks)
 
@@ -65,7 +65,8 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
-- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+- [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Free video lectures)
+- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) (Paid, the classic CLRS textbook)
 
 ## Computer Architecture and Systems (8-12 weeks)
 
@@ -91,7 +92,7 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Introduction to Databases by Stanford University on Coursera](https://www.coursera.org/learn/intro-to-databases)
+- [Introduction to SQL by Harvard University (CS50) on edX](https://www.edx.org/learn/sql/harvard-university-cs50-s-introduction-to-sql)
 - [SQLBolt](https://sqlbolt.com/) (Online interactive SQL tutorials)
 
 ## Web Development (8-12 weeks)
@@ -116,8 +117,8 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Software Engineering Essentials by University of Colorado Boulder on Coursera](https://www.coursera.org/learn/software-engineering-essentials)
-- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959)
+- [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle)
+- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959) (Paid)
 
 ## Artificial Intelligence and Machine Learning
 
@@ -128,10 +129,11 @@ A completely free program to learn computer science course by course
 - Neural networks and deep learning (4-6 weeks)
 - Natural language processing
 - Computer vision
+- Transformers, large language models, and generative AI
 
 **Resources:**
 
-- [Machine Learning by Andrew Ng on Coursera](https://www.coursera.org/learn/machine-learning)
+- [Machine Learning Specialization by Andrew Ng (DeepLearning.AI/Stanford) on Coursera](https://www.coursera.org/learn/machine-learning)
 - [Deep Learning by Yoshua Bengio, Ian Goodfellow, and Aaron Courville](https://www.deeplearningbook.org/)
 
 ## Computer Graphics and Visualization (8-12 weeks)
@@ -145,8 +147,9 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Computer Graphics by University of Tokyo on edX](https://www.edx.org/course/computer-graphics-3)
-- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/)
+- [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics)
+- [Learn OpenGL](https://learnopengl.com/) (Free graphics programming tutorials)
+- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) (Paid, companion site has free resources)
 
 ## Human-Computer Interaction (8-12 weeks)
 
@@ -159,8 +162,8 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Human-Computer Interaction by University of California San Diego on Coursera](https://www.coursera.org/specializations/human-computer-interaction)
-- [Don't Make Me Think by Steve Krug](https://www.sensible.com/dmmt.html)
+- [Interaction Design Specialization by University of California San Diego on Coursera](https://www.coursera.org/specializations/interaction-design)
+- [Don't Make Me Think by Steve Krug](https://www.sensible.com/dont-make-me-think/) (Paid)
 
 ## Cybersecurity (8-12 weeks)
 
@@ -172,19 +175,19 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Introduction to Cybersecurity by New York University Tandon School of Engineering on edX](https://www.edx.org/course/introduction-to-cybersecurity-2)
-- [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/~rja14/book.html)
+- [Introduction to Cyber Security Specialization by New York University on Coursera](https://www.coursera.org/specializations/intro-cyber-security)
+- [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/~rja14/book.html) (Free, full text online)
 
 ## Software Development Tools (4-6 weeks)
 
 - Version control systems (Git)
 - Integrated development environments (IDEs)
 - Debugging and profiling tools
-- Build automation and continuous integration (Jenkins)
+- Build automation and continuous integration (e.g., GitHub Actions, Jenkins)
 
 **Resources:**
 
-- [Git Handbook by GitHub](https://guides.github.com/introduction/git-handbook/)
+- [About Git by GitHub Docs](https://docs.github.com/get-started/using-git/about-git)
 - [Eclipse IDE Tutorial by Vogella](https://www.vogella.com/tutorials/Eclipse/article.html)
 
 ## Mathematics for Computer Science (8-12 weeks)
@@ -197,7 +200,7 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Mathematics for Computer Science by Massachusetts Institute of Technology on MIT OpenCourseWare](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2005/)
+- [Mathematics for Computer Science (6.1200J) by Massachusetts Institute of Technology on MIT OpenCourseWare](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/)
 - [Linear Algebra by Gilbert Strang on MIT OpenCourseWare](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
 
 ## Ethics and Society in Computing (8-12 weeks)
@@ -210,8 +213,8 @@ A completely free program to learn computer science course by course
 
 **Resources:**
 
-- [Computing and Society by Harvard University on edX](https://www.edx.org/course/computing-and-society-2)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562185)
+- [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562185) (Paid)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
