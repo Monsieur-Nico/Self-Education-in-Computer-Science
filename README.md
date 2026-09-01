@@ -7,6 +7,8 @@ A completely free program to learn computer science course by course
 
 📖 **[Browse the interactive site](https://monsieur-nico.github.io/Self-Education-in-Computer-Science/)** — searchable, with sidebar navigation.
 
+*As an Amazon Associate I earn from qualifying purchases. Some book links below are affiliate links.*
+
 ## Table of Contents
 
 - [Introduction to Computer Science](#introduction-to-computer-science-1-2-weeks)
@@ -118,7 +120,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle)
-- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959) (Paid)
+- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959?tag=nicoscript06-20) (Paid, Amazon affiliate link)
 
 ## Artificial Intelligence and Machine Learning
 
@@ -214,7 +216,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562184) (Paid)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562184?tag=nicoscript06-20) (Paid, Amazon affiliate link)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
