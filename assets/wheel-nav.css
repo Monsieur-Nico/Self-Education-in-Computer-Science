@@ -1,16 +1,21 @@
 /* Wheel nav: a hairline rail docked to the left edge that widens into a
-   row of curved pills on proximity (desktop) or tap (touch). Replaces the
-   sidebar as the primary way to move between sections; the sidebar itself
-   stays reachable via the hamburger as a secondary search + full-tree
-   drawer. Reuses the site's existing theme tokens (--theme-color,
-   --accent-2, --bg, --text*, --border, --surface) so it always matches
-   whatever palette index.html defines, light or dark. */
+   row of curved pills on proximity (desktop) or tap (touch). It's the
+   only nav now - Docsify's sidebar and hamburger are hidden outright,
+   and search is reparented in (see .wn-search) rather than left behind.
+   Reuses the site's existing theme tokens (--theme-color, --accent-2,
+   --bg, --text*, --border) for the accent and text colors so it always
+   matches whatever palette index.html defines; --wn-pill-bg/-focus below
+   are solid tones of our own; the stock --surface token is a translucent
+   overlay meant for content that sits on the page background, and read
+   as too close to it here to separate a pill from what's behind it. */
 
 #wheel-nav {
   position: fixed;
   inset: 0;
   z-index: 60;
   pointer-events: none;
+  --wn-pill-bg: #161c2c;
+  --wn-pill-bg-focus: #212c47;
 }
 
 #wn-hitzone {
@@ -24,6 +29,55 @@
 
 .wn-touch #wn-hitzone {
   width: 34px;
+}
+
+/* Docsify's search box, reparented here from the now-hidden sidebar (see
+   assets/wheel-nav.js). Pinned to the top of the rail rather than riding
+   the curve with the other items, so it's always in the same place and
+   never fighting for room with a long section title mid-scroll. Sitting
+   inside #wn-hitzone keeps the cursor "in" the nav the whole way when
+   moving between the rail and the search field, so it doesn't swing shut
+   mid-traverse. */
+#wn-search-slot {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 230px;
+  opacity: 0;
+  transform: translateX(-16px);
+  pointer-events: none;
+  transition: opacity 240ms ease, transform 280ms cubic-bezier(.22,.8,.32,1);
+}
+
+#wheel-nav.wn-open #wn-search-slot {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.wn-search {
+  background: var(--wn-pill-bg);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.wn-search input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+
+.wn-search h2 {
+  font-size: 12px;
+  margin: 10px 2px 4px;
+}
+
+.wn-search .matching-post {
+  padding: 8px 2px;
 }
 
 #wn-rail {
@@ -53,6 +107,22 @@
   box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.18);
   transform: translateY(-50%);
   transition: top 260ms cubic-bezier(.22,.8,.32,1);
+}
+
+/* On touch, nothing else on the page hints that the dot is tappable, so
+   it breathes to invite a first tap - and settles once the wheel is
+   actually open, when it's no longer needed. */
+@keyframes wn-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.22); transform: translateY(-50%) scale(1); }
+  50% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0.05); transform: translateY(-50%) scale(1.2); }
+}
+
+.wn-touch #wn-rail-tick {
+  animation: wn-pulse 2.4s ease-in-out infinite;
+}
+
+.wn-touch.wn-open #wn-rail-tick {
+  animation: none;
 }
 
 #wn-wheel {
@@ -86,9 +156,9 @@
   white-space: nowrap;
   padding: 7px 14px 7px 12px;
   border-radius: 8px 999px 999px 8px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+  background: var(--wn-pill-bg);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   transform-origin: left center;
   will-change: transform, opacity;
   transition: transform 260ms cubic-bezier(.22,.8,.32,1), opacity 260ms ease,
@@ -96,12 +166,12 @@
 }
 
 .wn-item.wn-focus {
-  background: var(--surface);
+  background: var(--wn-pill-bg-focus);
   border-color: var(--theme-color);
 }
 
 .wn-item.wn-back {
-  background: var(--surface);
+  background: var(--wn-pill-bg-focus);
 }
 
 .wn-item a {
@@ -138,32 +208,18 @@
   opacity: 0.8;
 }
 
-/* Turn Docsify's own sidebar into an on-demand drawer at every viewport
-   width (it defaults to permanently visible above 768px), so it no
-   longer competes with the wheel for the same strip of screen. It still
-   holds search and the full page tree - just tucked behind the hamburger
-   everywhere now instead of only on mobile. */
-@media screen and (min-width: 769px) {
-  .sidebar {
-    transform: translateX(-320px);
-    transition: transform 250ms ease;
-  }
+/* The wheel fully replaces Docsify's own sidebar and its hamburger
+   toggle - not just as the primary nav but as the only one, with search
+   (see .wn-search below) reparented into the wheel itself. Hide both
+   at every width instead of leaving them as an on-demand drawer. */
+.sidebar,
+.sidebar-toggle {
+  display: none !important;
+}
 
-  body:not(.close) .sidebar {
-    transform: translateX(0);
-  }
-
-  .content {
-    margin-left: 0 !important;
-    max-width: 100% !important;
-  }
-
-  .sidebar-toggle {
-    display: block !important;
-    top: 0 !important;
-    bottom: auto !important;
-    padding: 10px 30px 30px 10px !important;
-  }
+.content {
+  margin-left: 0 !important;
+  max-width: 100% !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -176,8 +232,8 @@
 @media (prefers-reduced-motion: reduce) {
   #wn-rail-tick,
   #wn-panel,
-  .wn-item,
-  .sidebar {
+  .wn-item {
     transition-duration: 0.001ms !important;
+    animation: none !important;
   }
 }

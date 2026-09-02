@@ -121,6 +121,7 @@
   var itemNodes = [];
   var focusIndex = 0;
   var isOpen = false;
+  var searchFocused = false;
   var pivotY = window.innerHeight / 2;
 
   function renderItemList() {
@@ -213,7 +214,7 @@
   }
 
   function close() {
-    if (!isOpen) return;
+    if (!isOpen || searchFocused) return;
     isOpen = false;
     root.classList.remove("wn-open");
   }
@@ -229,20 +230,10 @@
   }
 
   function init() {
-    // Docsify stamps its own class list onto <body> once at startup
-    // (wiping any static class from the HTML). Below its mobile breakpoint
-    // that default is already a closed sidebar, exactly what we want. At
-    // wider widths the stock theme instead keeps the sidebar permanently
-    // open regardless of this class - our own desktop-only override CSS
-    // (assets/wheel-nav.css) repurposes ".close" to mean hidden there, so
-    // it needs adding explicitly. This only runs once, so a user's own
-    // toggle afterwards is untouched either way.
-    if (window.innerWidth >= 769) document.body.classList.add("close");
-
     root = document.createElement("div");
     root.id = "wheel-nav";
     root.innerHTML =
-      '<div id="wn-hitzone"></div>' +
+      '<div id="wn-hitzone"><div id="wn-search-slot"></div></div>' +
       '<div id="wn-rail"><div id="wn-rail-tick"></div></div>' +
       '<div id="wn-wheel"><div id="wn-panel"><div id="wn-items"></div></div></div>';
     document.body.appendChild(root);
@@ -256,6 +247,27 @@
 
     isTouch = window.matchMedia && !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     if (isTouch) root.classList.add("wn-touch");
+
+    // Docsify's search plugin builds its own input + results DOM once and
+    // normally mounts it inside .sidebar; reparent that same element (not
+    // a copy) into the wheel so typing, results, and the plugin's own
+    // event listeners keep working exactly as before, just relocated.
+    var searchBox = document.querySelector(".search");
+    if (searchBox) {
+      searchBox.classList.add("wn-search");
+      document.getElementById("wn-search-slot").appendChild(searchBox);
+
+      var searchInput = searchBox.querySelector("input");
+      if (searchInput) {
+        searchInput.addEventListener("focus", function () {
+          searchFocused = true;
+          open(pivotY);
+        });
+        searchInput.addEventListener("blur", function () {
+          searchFocused = false;
+        });
+      }
+    }
 
   // ------------------------------------------------------- desktop input
 
