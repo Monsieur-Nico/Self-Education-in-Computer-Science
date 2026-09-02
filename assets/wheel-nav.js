@@ -73,8 +73,10 @@
     return { path: path, id: id };
   }
 
-  function getContext() {
-    var r = parseRoute(window.location.hash);
+  // Accepts an explicit hash so it can also resolve arbitrary hrefs (see
+  // resolveResultLabel below), not just the current route.
+  function getContext(hash) {
+    var r = parseRoute(hash || window.location.hash);
     if (r.path === "/") return { level: "home", currentId: r.id };
 
     var m = /^\/sections\/([a-z0-9-]+)$/.exec(r.path);
@@ -84,6 +86,35 @@
     if (m2) return { level: "section", slug: "programming-fundamentals", currentPath: "programming-fundamentals/" + m2[1] };
 
     return { level: "home", currentId: r.id };
+  }
+
+  // Search results only show the matched heading itself (e.g. "Resources"
+  // or "What to Prepare"), and most sections share those same heading
+  // names - so on their own, a results list is a wall of identical-
+  // looking rows with no way to tell them apart. This resolves which
+  // section/page a result's href actually belongs to, reusing the exact
+  // same routing logic the wheel itself uses to know where it is.
+  function resolveResultLabel(href) {
+    var ctx = getContext(href);
+    if (ctx.level === "home") {
+      var home = HOME_ITEMS.find(function (s) { return s.anchor === ctx.currentId; });
+      return home ? home.title : "Table of Contents";
+    }
+    var section = SECTIONS[ctx.slug];
+    if (section.items) {
+      // Programming Fundamentals' own item list includes an entry for
+      // its overview page itself ("What to Expect and Prepare") so the
+      // wheel can link back to it - but that entry's title isn't a
+      // section name, it's a page name that happens to repeat the very
+      // heading names ("What to Expect", "What to Prepare") it would be
+      // labeling. A result on that overview page should read as
+      // "Programming Fundamentals", the same as any other section's.
+      var found = section.items.find(function (it) {
+        return it.path === ctx.currentPath && it.path !== "sections/" + ctx.slug;
+      });
+      if (found) return found.title;
+    }
+    return section.title;
   }
 
   function buildItems(ctx) {
@@ -116,13 +147,42 @@
   // and reliably loses - so nothing here runs until Docsify's own
   // `doneEach` lifecycle hook says a render has actually completed.
 
-  var root, hitZone, railEl, tickEl, wheelEl, panelEl, itemsEl, isTouch;
+  var root, hitZone, railEl, tickEl, wheelEl, panelEl, itemsEl, searchSlot, isTouch;
   var items = [];
   var itemNodes = [];
   var focusIndex = 0;
   var isOpen = false;
   var searchFocused = false;
   var pivotY = window.innerHeight / 2;
+
+  // Positions one row (a regular item, or the pinned search row) along the
+  // same curve as everything else in the wheel, `delta` rows from focus.
+  // Regular items use `transform` (cheaper to animate); passing a row's
+  // own half-height instead positions it with left/top (see
+  // #wn-search-slot in wheel-nav.css for why the search row needs that).
+  function positionRow(el, delta, labelEl, halfHeight) {
+    var y = delta * ROW_H;
+
+    if (Math.abs(y) > VISIBLE_HALF) {
+      el.style.opacity = "0";
+      el.style.pointerEvents = "none";
+      return;
+    }
+
+    var t = Math.abs(y) / VISIBLE_HALF;
+    var curve = Math.cos(t * Math.PI / 2);
+    var x = BULGE_MAX * curve;
+
+    if (halfHeight) {
+      el.style.left = x.toFixed(1) + "px";
+      el.style.top = "calc(50% - " + halfHeight.toFixed(1) + "px + " + y.toFixed(1) + "px)";
+    } else {
+      el.style.transform = "translate(" + x.toFixed(1) + "px, " + y.toFixed(1) + "px) translateY(-50%)";
+    }
+    el.style.opacity = String(0.28 + curve * 0.72);
+    el.style.pointerEvents = "auto";
+    if (labelEl) labelEl.style.maxWidth = (LABEL_MIN + (LABEL_MAX - LABEL_MIN) * curve).toFixed(0) + "px";
+  }
 
   function renderItemList() {
     itemsEl.innerHTML = "";
@@ -173,32 +233,110 @@
     return Math.max(min, Math.min(max, y));
   }
 
+  // Labels each result with the section/page it belongs to (see
+  // resolveResultLabel), since Docsify only shows the matched heading
+  // itself and most of ours repeat the same few names across sections.
+  // Docsify rebuilds these nodes from scratch on every keystroke, so
+  // this just re-runs each time rather than trying to diff them.
+  function annotateResults() {
+    var posts = document.querySelectorAll(".wn-search .matching-post");
+    posts.forEach(function (post) {
+      if (post._wnLabeled) return;
+      post._wnLabeled = true;
+      var a = post.querySelector("a[href]");
+      var h2 = post.querySelector("h2");
+      if (!a || !h2) return;
+      var label = resolveResultLabel(a.getAttribute("href"));
+      if (!label) return;
+      var tag = document.createElement("div");
+      tag.className = "wn-result-section";
+      tag.textContent = label;
+      // h2 lives inside the <a>, not as a direct child of .matching-post -
+      // insertBefore needs a direct child as its reference node
+      post.insertBefore(tag, a);
+    });
+  }
+
+  // Pins the search results panel to whichever side of the search field
+  // actually has room, and clamps its position and height to the
+  // viewport, so it's never cut off at a screen edge or hidden behind
+  // the rest of the wheel regardless of where the cursor opened it.
+  //
+  // It stays exactly where Docsify put it in the DOM - moving it out
+  // from under .wn-search sounds appealing (position: fixed would then
+  // mean the actual viewport, since #wn-panel's own open/close transform
+  // currently hijacks that as the containing block instead) but Docsify
+  // keeps its own reference to this element and broke on the very next
+  // keystroke once it was no longer where it expected. So: leave it in
+  // place, keep it position: absolute, and instead convert our desired
+  // viewport coordinates into coordinates relative to whatever its real
+  // containing block turns out to be, via offsetParent - which, unlike
+  // position: fixed, keeps working correctly under a transform.
+  function positionResultsPanel() {
+    var panel = document.querySelector(".wn-search .results-panel");
+    var inputWrap = document.querySelector(".wn-search .input-wrap");
+    if (!panel || !inputWrap || !panel.classList.contains("show")) return;
+
+    annotateResults();
+
+    var MARGIN = 12;
+    var GAP = 10;
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var iw = inputWrap.getBoundingClientRect();
+
+    var panelWidth = Math.min(300, vw - MARGIN * 2);
+    panel.style.width = panelWidth + "px";
+
+    var left, top, maxHeight;
+    var roomRight = vw - iw.right - GAP - MARGIN;
+
+    if (roomRight >= panelWidth) {
+      // plenty of room beside the field: pin to its right, top-aligned,
+      // then slide up if needed so the bottom doesn't run off-screen
+      left = iw.right + GAP;
+      var naturalTop = iw.top;
+      top = Math.max(MARGIN, Math.min(naturalTop, vh - MARGIN - 120));
+      maxHeight = vh - top - MARGIN;
+    } else {
+      // not enough width beside it (narrow window / mobile): stack it
+      // above or below instead, whichever side has more room
+      left = Math.max(MARGIN, Math.min(iw.left, vw - panelWidth - MARGIN));
+      var roomBelow = vh - iw.bottom - GAP - MARGIN;
+      var roomAbove = iw.top - GAP - MARGIN;
+      if (roomBelow >= 120 || roomBelow >= roomAbove) {
+        top = iw.bottom + GAP;
+        maxHeight = Math.max(120, vh - top - MARGIN);
+      } else {
+        maxHeight = Math.max(120, roomAbove);
+        top = iw.top - GAP - maxHeight;
+      }
+    }
+
+    var parent = panel.offsetParent || document.body;
+    var pr = parent.getBoundingClientRect();
+
+    panel.style.left = (left - pr.left).toFixed(0) + "px";
+    panel.style.top = (top - pr.top).toFixed(0) + "px";
+    panel.style.maxHeight = maxHeight.toFixed(0) + "px";
+  }
+
   function render() {
     panelEl.style.top = pivotY + "px";
-    var n = itemNodes.length;
+
+    // the search row is pinned one row above wherever "← All Sections"
+    // (item 0) currently sits, so it scrolls with the wheel exactly like
+    // any other row instead of floating separately over it. Measured
+    // fresh each time rather than assuming a fixed height, so it stays
+    // correctly centered even if the field's rendered size ever shifts.
+    if (searchSlot) positionRow(searchSlot, -1 - focusIndex, null, searchSlot.offsetHeight / 2);
 
     itemNodes.forEach(function (node, i) {
-      var delta = i - focusIndex;
-      var y = delta * ROW_H;
-
-      if (Math.abs(y) > VISIBLE_HALF) {
-        node.style.opacity = "0";
-        node.style.pointerEvents = "none";
-        return;
-      }
-
-      var t = Math.abs(y) / VISIBLE_HALF;
-      var curve = Math.cos(t * Math.PI / 2);
-      var x = BULGE_MAX * curve;
-      var isFocus = i === focusIndex;
-      var labelWidth = LABEL_MIN + (LABEL_MAX - LABEL_MIN) * curve;
-
-      node.style.transform = "translate(" + x.toFixed(1) + "px, " + y.toFixed(1) + "px) translateY(-50%)";
-      node.style.opacity = String(0.28 + curve * 0.72);
-      node.style.pointerEvents = "auto";
-      node.classList.toggle("wn-focus", isFocus);
-      node._label.style.maxWidth = labelWidth.toFixed(0) + "px";
+      positionRow(node, i - focusIndex, node._label);
+      node.classList.toggle("wn-focus", i === focusIndex);
     });
+
+    positionResultsPanel();
   }
 
   function open(y) {
@@ -233,9 +371,9 @@
     root = document.createElement("div");
     root.id = "wheel-nav";
     root.innerHTML =
-      '<div id="wn-hitzone"><div id="wn-search-slot"></div></div>' +
+      '<div id="wn-hitzone"></div>' +
       '<div id="wn-rail"><div id="wn-rail-tick"></div></div>' +
-      '<div id="wn-wheel"><div id="wn-panel"><div id="wn-items"></div></div></div>';
+      '<div id="wn-wheel"><div id="wn-panel"><div id="wn-search-slot"></div><div id="wn-items"></div></div></div>';
     document.body.appendChild(root);
 
     hitZone = document.getElementById("wn-hitzone");
@@ -244,6 +382,7 @@
     wheelEl = document.getElementById("wn-wheel");
     panelEl = document.getElementById("wn-panel");
     itemsEl = document.getElementById("wn-items");
+    searchSlot = document.getElementById("wn-search-slot");
 
     isTouch = window.matchMedia && !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     if (isTouch) root.classList.add("wn-touch");
@@ -251,11 +390,14 @@
     // Docsify's search plugin builds its own input + results DOM once and
     // normally mounts it inside .sidebar; reparent that same element (not
     // a copy) into the wheel so typing, results, and the plugin's own
-    // event listeners keep working exactly as before, just relocated.
+    // event listeners keep working exactly as before, just relocated. It
+    // lives in its own row (searchSlot), positioned every render() call
+    // right alongside the regular items so it rides the same curve rather
+    // than sitting fixed on top of them.
     var searchBox = document.querySelector(".search");
     if (searchBox) {
       searchBox.classList.add("wn-search");
-      document.getElementById("wn-search-slot").appendChild(searchBox);
+      searchSlot.appendChild(searchBox);
 
       var searchInput = searchBox.querySelector("input");
       if (searchInput) {
@@ -265,6 +407,23 @@
         });
         searchInput.addEventListener("blur", function () {
           searchFocused = false;
+        });
+      }
+
+      // Docsify rewrites the results list (and toggles its "show" class)
+      // on every keystroke; reposition whenever that happens rather than
+      // only on our own events, so we never miss an update regardless of
+      // how the plugin triggers it internally.
+      // Observe the stable outer box rather than .results-panel itself -
+      // some Docsify search plugin versions tear it down and rebuild it
+      // from scratch on every keystroke rather than mutating it in place,
+      // which would silently detach an observer attached directly to it.
+      if (window.MutationObserver) {
+        new MutationObserver(positionResultsPanel).observe(searchBox, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+          attributeFilter: ["class"]
         });
       }
     }
@@ -288,6 +447,10 @@
 
     function handleWheel(e) {
       if (!isOpen) return;
+      // let the results panel scroll its own (possibly long) list
+      // natively instead of cycling the wheel's focus underneath it
+      var results = document.querySelector(".results-panel.show");
+      if (results && results.contains(e.target)) return;
       e.preventDefault();
       stepFocus(e.deltaY > 0 ? 1 : -1);
     }
