@@ -1,0 +1,341 @@
+/* Wheel nav: a hairline rail docked to the left edge that widens into a
+   row of curved pills on proximity (desktop) or tap (touch). It's the
+   only nav now - Docsify's sidebar and hamburger are hidden outright,
+   and search is reparented in (see .wn-search) rather than left behind.
+   Reuses the site's existing theme tokens (--theme-color, --accent-2,
+   --bg, --text*, --border) for the accent and text colors so it always
+   matches whatever palette index.html defines; --wn-pill-bg/-focus below
+   are solid tones of our own; the stock --surface token is a translucent
+   overlay meant for content that sits on the page background, and read
+   as too close to it here to separate a pill from what's behind it. */
+
+#wheel-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  --wn-pill-bg: #161c2c;
+  --wn-pill-bg-focus: #212c47;
+}
+
+#wn-hitzone {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 100vh;
+  pointer-events: auto;
+}
+
+.wn-touch #wn-hitzone {
+  width: 34px;
+}
+
+/* Docsify's search box, reparented here from the now-hidden sidebar (see
+   assets/wheel-nav.js). It's a genuine row in the wheel - positioned by
+   the same positionRow() curve as every .wn-item, one row above "← All
+   Sections" - not a separate element pinned over the top of it.
+
+   Docsify's own markup splits it into two children we style separately:
+   .input-wrap (the text field) stays exactly pill-sized and shaped like
+   every other row; .results-panel is a floating panel that JS pins to
+   whichever side of it actually has room (see positionResultsPanel in
+   wheel-nav.js), so a long results list never grows the pill itself,
+   shifts anything else in the wheel, or runs off the edge of the screen.
+
+   The selectors below are prefixed with #wheel-nav purely to out-rank
+   index.html's own same-specificity `.search input { ... !important }`
+   rules, which load after this stylesheet and would otherwise win the
+   cascade tiebreak and leak their generic (light-sidebar-oriented)
+   border/background back onto our pill. */
+/* Positioned with left/top rather than transform like every .wn-item -
+   this row's own height is fixed and known (unlike the text items, which
+   need transform-origin scaling), so left/top costs nothing extra here
+   and keeps this element out of the transform-driven containing-block
+   chain that positionResultsPanel() (in wheel-nav.js) already has to
+   account for one level up, at #wn-panel. */
+#wn-search-slot {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 17px);
+  width: 230px;
+  z-index: 5;
+  will-change: left, top, opacity;
+  transition: left 260ms cubic-bezier(.22,.8,.32,1), top 260ms cubic-bezier(.22,.8,.32,1), opacity 260ms ease;
+}
+
+/* Docsify's own base styling (meant for living inside .sidebar, and
+   more specific than a plain .search selector - a plain reset here
+   loses that cascade fight silently) puts a 6px padding, a 20px bottom
+   margin, and a near-white 1px bottom border on this element - all
+   meant to visually separate it from the sidebar list below it. Left in
+   place, that margin also threw off the row's vertical centering enough
+   to overlap the item below it. Our own layout (positionRow + ROW_H)
+   and the pill's own border (on .input-wrap) fully account for spacing
+   and separation already, so all three are forced back to nothing. */
+#wheel-nav .wn-search {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+#wheel-nav .wn-search .input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px 7px 12px;
+  border-radius: 8px 999px 999px 8px;
+  background: var(--wn-pill-bg);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#wheel-nav .wn-search:focus-within .input-wrap {
+  background: var(--wn-pill-bg-focus);
+  border-color: var(--theme-color);
+}
+
+#wheel-nav .wn-search input {
+  flex: 1;
+  min-width: 0;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  font-size: 13.5px;
+  color: var(--text) !important;
+}
+
+#wheel-nav .wn-search input::placeholder {
+  color: var(--text-dim);
+}
+
+#wheel-nav .wn-search .clear-button {
+  flex-shrink: 0;
+  display: flex;
+  opacity: 0.6;
+}
+
+#wheel-nav .wn-search .clear-button:hover {
+  opacity: 1;
+}
+
+#wheel-nav .wn-search .clear-button circle {
+  fill: rgba(148, 163, 184, 0.35);
+}
+
+#wheel-nav .wn-search .clear-button path {
+  stroke: var(--text);
+}
+
+/* Positioned entirely by JS (positionResultsPanel in wheel-nav.js) once
+   shown, in viewport coordinates converted to whatever this actually
+   resolves against under the hood - #wn-panel's own open/close transform
+   makes it (not the viewport) the containing block here, which the JS
+   accounts for rather than fighting. It stays on whichever side of the
+   search field has room, and never runs off a screen edge. */
+#wheel-nav .wn-search .results-panel {
+  position: absolute;
+  overflow-y: auto;
+  background: var(--wn-pill-bg);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+
+#wheel-nav .wn-search .results-panel:not(.show) {
+  display: none;
+}
+
+/* Which section/page a result belongs to (see resolveResultLabel and
+   annotateResults in wheel-nav.js) - most of our headings repeat the
+   same handful of names ("Resources", "What to Prepare"...) across every
+   section, so without this a results list is a wall of identical rows. */
+#wheel-nav .wn-search .results-panel .wn-result-section {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--theme-color);
+  opacity: 0.85;
+  margin: 10px 2px 0;
+}
+
+#wheel-nav .wn-search .results-panel h2 {
+  font-size: 12px;
+  margin: 2px 2px 4px;
+  border-bottom: 0;
+}
+
+#wheel-nav .wn-search .results-panel .matching-post {
+  padding: 8px 2px;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+#wheel-nav .wn-search .results-panel .matching-post:first-child {
+  border-top: 0;
+}
+
+#wn-rail {
+  position: fixed;
+  left: 10px;
+  top: 28px;
+  bottom: 28px;
+  width: 4px;
+  border-radius: 3px;
+  background: var(--border);
+  pointer-events: auto;
+  cursor: pointer;
+  transition: background 220ms ease;
+}
+
+#wheel-nav.wn-open #wn-rail {
+  background: var(--theme-color);
+}
+
+#wn-rail-tick {
+  position: absolute;
+  left: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--theme-color);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.18);
+  transform: translateY(-50%);
+  transition: top 260ms cubic-bezier(.22,.8,.32,1);
+}
+
+/* On touch, nothing else on the page hints that the dot is tappable, so
+   it breathes to invite a first tap - and settles once the wheel is
+   actually open, when it's no longer needed. */
+@keyframes wn-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.22); transform: translateY(-50%) scale(1); }
+  50% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0.05); transform: translateY(-50%) scale(1.2); }
+}
+
+.wn-touch #wn-rail-tick {
+  animation: wn-pulse 2.4s ease-in-out infinite;
+}
+
+.wn-touch.wn-open #wn-rail-tick {
+  animation: none;
+}
+
+#wn-wheel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+#wn-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  transform: translate(-100%, -50%) scale(0.85);
+  opacity: 0;
+  transition: opacity 240ms ease, transform 320ms cubic-bezier(.22,.8,.32,1);
+}
+
+#wheel-nav.wn-open #wn-panel {
+  transform: translate(0%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wn-item {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  white-space: nowrap;
+  padding: 7px 14px 7px 12px;
+  border-radius: 8px 999px 999px 8px;
+  background: var(--wn-pill-bg);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform-origin: left center;
+  will-change: transform, opacity;
+  transition: transform 260ms cubic-bezier(.22,.8,.32,1), opacity 260ms ease,
+    background 200ms ease, border-color 200ms ease;
+}
+
+.wn-item.wn-focus {
+  background: var(--wn-pill-bg-focus);
+  border-color: var(--theme-color);
+}
+
+.wn-item.wn-back {
+  background: var(--wn-pill-bg-focus);
+}
+
+.wn-item a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.wn-item.wn-focus a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.wn-item.wn-back a {
+  color: var(--theme-color);
+}
+
+.wn-item a:hover,
+.wn-item a:focus-visible {
+  color: var(--theme-color);
+  outline: none;
+}
+
+.wn-weeks {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-dim);
+  margin-left: 6px;
+  opacity: 0.8;
+}
+
+/* The wheel fully replaces Docsify's own sidebar and its hamburger
+   toggle - not just as the primary nav but as the only one, with search
+   (see .wn-search below) reparented into the wheel itself. Hide both
+   at every width instead of leaving them as an on-demand drawer. */
+.sidebar,
+.sidebar-toggle {
+  display: none !important;
+}
+
+.content {
+  left: 0 !important;
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  #wn-hitzone,
+  #wn-rail {
+    left: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #wn-rail-tick,
+  #wn-panel,
+  #wn-search-slot,
+  .wn-item {
+    transition-duration: 0.001ms !important;
+    animation: none !important;
+  }
+}

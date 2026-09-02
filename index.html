@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/wheel-nav.css">
   <style>
     /* ---- Dark "techy" theme -----------------------------------------
        Overrides the default light Vue theme with a dark, high-contrast
@@ -259,20 +260,6 @@
       vertical-align: middle;
     }
 
-    /* Move the closed-state mobile sidebar toggle from the bottom-left to the
-       top-left. Scoped to the theme's own mobile breakpoint (<=768px) and to
-       the closed state (body without .close) only - above that breakpoint
-       the toggle isn't part of the collapsible-sidebar behavior at all, and
-       when the sidebar is open the theme already places the toggle at the
-       bottom so it doesn't sit on top of the search box at the top of the
-       sidebar. */
-    @media screen and (max-width: 768px) {
-      body:not(.close) .sidebar-toggle {
-        top: 0;
-        bottom: auto;
-        padding: 10px 30px 30px 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -295,5 +282,6 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="assets/wheel-nav.js"></script>
 </body>
 </html>
