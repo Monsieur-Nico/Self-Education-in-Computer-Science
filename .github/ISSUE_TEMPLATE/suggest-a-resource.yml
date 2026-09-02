@@ -7,6 +7,10 @@ body:
     id: section
     attributes:
       label: Which section does this belong in?
+      # Keep this list in sync with the ## section headings in README.md.
+      # When a new top-level section is added there, add it here too so
+      # suggestions can target it directly instead of falling back to
+      # "A new section not listed above".
       options:
         - Introduction to Computer Science
         - Programming Fundamentals
