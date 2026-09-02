@@ -1,0 +1,70 @@
+name: "📚 Suggest a resource"
+description: Suggest a course, book, video series, or tutorial to add to the curriculum
+title: "[Resource] "
+labels: ["resource suggestion"]
+body:
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which section does this belong in?
+      options:
+        - Introduction to Computer Science
+        - Programming Fundamentals
+        - Data Structures and Algorithms
+        - Computer Architecture and Systems
+        - Database Systems
+        - Web Development
+        - Software Engineering
+        - Artificial Intelligence and Machine Learning
+        - Computer Graphics and Visualization
+        - Human-Computer Interaction
+        - Cybersecurity
+        - Software Development Tools
+        - Mathematics for Computer Science
+        - Ethics and Society in Computing
+        - A new section not listed above
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Resource title
+      placeholder: e.g. "CS50's Introduction to Computer Science"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link to the resource
+      placeholder: https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - Course
+        - Video
+        - Book
+        - PDF
+        - Tutorial
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost
+      options:
+        - Free
+        - Paid
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be added?
+      description: What makes it worth including - is it free/current/well-regarded, does it fill a gap in this section, etc.?
+    validations:
+      required: false

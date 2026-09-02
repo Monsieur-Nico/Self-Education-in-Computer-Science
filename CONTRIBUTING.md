@@ -1,29 +1,24 @@
 # Contributing
 
-Thanks for considering a contribution! This project is a curated, low-cost computer science curriculum, and it stays useful because people point out what's broken, outdated, or missing.
+Thanks for considering a contribution! This project is a curated, low-cost computer science curriculum. To keep it focused and consistent, content contributions go through issues rather than open pull requests — we review each one and make the actual change ourselves, so things like badge conventions and cost verification stay consistent.
 
 ## Ways to contribute
 
-- **Report or fix a dead/outdated link.** Resources move, get discontinued, or change platform. If a link 404s, redirects somewhere unexpected, or the linked course/edition is no longer current, open an issue or a PR with a working replacement.
-- **Suggest a better resource.** Found a free or cheaper alternative to something listed? A more current edition of a book or course? Open a PR.
-- **Improve a course outline.** The files under [`programming-fundamentals/`](programming-fundamentals) follow an Overview → Outline → summary structure — feel free to expand existing ones or add outlines for topics that don't have one yet.
-- **Fix errors.** Typos, broken formatting, incorrect badges, anything that's just wrong.
+- **[Suggest a resource](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/issues/new/choose)** — found a course, book, video series, or tutorial that belongs here?
+- **[Report a broken or unavailable resource](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/issues/new/choose)** — a link is dead, redirects somewhere unexpected, the course was discontinued, or it's no longer free?
+- **[Anything else](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/issues/new/choose)** — a typo, a formatting issue, a question, general feedback.
 
-## Guidelines
+Pick the matching template when you [open a new issue](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/issues/new/choose) — it'll ask for exactly what we need (link, section, why) to act on it quickly.
 
-- **Prefer free or low-cost resources.** This curriculum's whole point is affordability. A paid resource is fine as a supplementary option (tag it with the ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) badge), but each section should have at least one genuinely free primary option.
-- **Verify links before submitting.** Make sure the URL is live and actually points to what the link text says it does.
-- **Match the existing badge conventions.** See the legend near the top of [README.md](README.md#table-of-contents) for what each badge (Course/Video/Book/PDF/Tutorial/Free/Paid/Amazon) means, and tag new resources consistently.
-- **Keep PRs focused.** One topic/fix per PR is easier to review than a bundle of unrelated changes.
+## What we're looking for in resource suggestions
 
-## How to submit a change
+- **Prefer free or low-cost resources.** This curriculum's whole point is affordability. A paid resource is fine as a supplementary option, but each section should have at least one genuinely free primary option.
+- **Make sure the link works** and actually points to what you say it does.
+- **Say why it's worth adding** — what does it cover, is it current, is it free.
 
-1. Fork the repo.
-2. Create a branch for your change.
-3. Make your edit.
-4. Open a pull request describing what changed and why.
+## Pull requests
 
-If you're not sure whether something is worth a PR, open an issue first and we can figure it out together.
+We're not accepting unsolicited pull requests for content changes (new resources, edits to course outlines, etc.) — please use the issue templates above instead. If you've spotted something you're confident is a trivial, unambiguous fix (a typo, a broken markdown link), feel free to open a PR for just that.
 
 ## Track your own progress
 

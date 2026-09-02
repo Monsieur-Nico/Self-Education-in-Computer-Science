@@ -1,0 +1,12 @@
+name: "💬 Other"
+description: Anything else - a typo, a formatting issue, a question, general feedback
+title: ""
+labels: ["other"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What's up?
+      description: Describe the issue or feedback
+    validations:
+      required: true

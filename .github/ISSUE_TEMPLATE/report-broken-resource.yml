@@ -1,0 +1,38 @@
+name: "⚠️ Report a broken or unavailable resource"
+description: Let us know a link is dead, redirected, discontinued, or no longer free
+title: "[Broken Link] "
+labels: ["broken link"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Which link is broken?
+      description: Paste the exact link as it appears in the README
+      placeholder: https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What's wrong with it?
+      options:
+        - Dead / 404
+        - Redirects somewhere unexpected
+        - Course or resource discontinued
+        - No longer free
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Know a good replacement? (optional)
+      placeholder: https://...
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+    validations:
+      required: false
