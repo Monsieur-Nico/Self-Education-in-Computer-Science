@@ -1,0 +1,183 @@
+/* Wheel nav: a hairline rail docked to the left edge that widens into a
+   row of curved pills on proximity (desktop) or tap (touch). Replaces the
+   sidebar as the primary way to move between sections; the sidebar itself
+   stays reachable via the hamburger as a secondary search + full-tree
+   drawer. Reuses the site's existing theme tokens (--theme-color,
+   --accent-2, --bg, --text*, --border, --surface) so it always matches
+   whatever palette index.html defines, light or dark. */
+
+#wheel-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+}
+
+#wn-hitzone {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 100vh;
+  pointer-events: auto;
+}
+
+.wn-touch #wn-hitzone {
+  width: 34px;
+}
+
+#wn-rail {
+  position: fixed;
+  left: 10px;
+  top: 28px;
+  bottom: 28px;
+  width: 4px;
+  border-radius: 3px;
+  background: var(--border);
+  pointer-events: auto;
+  cursor: pointer;
+  transition: background 220ms ease;
+}
+
+#wheel-nav.wn-open #wn-rail {
+  background: var(--theme-color);
+}
+
+#wn-rail-tick {
+  position: absolute;
+  left: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--theme-color);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.18);
+  transform: translateY(-50%);
+  transition: top 260ms cubic-bezier(.22,.8,.32,1);
+}
+
+#wn-wheel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+#wn-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  transform: translate(-100%, -50%) scale(0.85);
+  opacity: 0;
+  transition: opacity 240ms ease, transform 320ms cubic-bezier(.22,.8,.32,1);
+}
+
+#wheel-nav.wn-open #wn-panel {
+  transform: translate(0%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wn-item {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  white-space: nowrap;
+  padding: 7px 14px 7px 12px;
+  border-radius: 8px 999px 999px 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+  transform-origin: left center;
+  will-change: transform, opacity;
+  transition: transform 260ms cubic-bezier(.22,.8,.32,1), opacity 260ms ease,
+    background 200ms ease, border-color 200ms ease;
+}
+
+.wn-item.wn-focus {
+  background: var(--surface);
+  border-color: var(--theme-color);
+}
+
+.wn-item.wn-back {
+  background: var(--surface);
+}
+
+.wn-item a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.wn-item.wn-focus a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.wn-item.wn-back a {
+  color: var(--theme-color);
+}
+
+.wn-item a:hover,
+.wn-item a:focus-visible {
+  color: var(--theme-color);
+  outline: none;
+}
+
+.wn-weeks {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-dim);
+  margin-left: 6px;
+  opacity: 0.8;
+}
+
+/* Turn Docsify's own sidebar into an on-demand drawer at every viewport
+   width (it defaults to permanently visible above 768px), so it no
+   longer competes with the wheel for the same strip of screen. It still
+   holds search and the full page tree - just tucked behind the hamburger
+   everywhere now instead of only on mobile. */
+@media screen and (min-width: 769px) {
+  .sidebar {
+    transform: translateX(-320px);
+    transition: transform 250ms ease;
+  }
+
+  body:not(.close) .sidebar {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .sidebar-toggle {
+    display: block !important;
+    top: 0 !important;
+    bottom: auto !important;
+    padding: 10px 30px 30px 10px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #wn-hitzone,
+  #wn-rail {
+    left: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #wn-rail-tick,
+  #wn-panel,
+  .wn-item,
+  .sidebar {
+    transition-duration: 0.001ms !important;
+  }
+}
