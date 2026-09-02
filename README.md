@@ -7,6 +7,8 @@ A completely free program to learn computer science course by course
 
 📖 **[Browse the interactive site](https://monsieur-nico.github.io/Self-Education-in-Computer-Science/)** — searchable, with sidebar navigation.
 
+*As an Amazon Associate I earn from qualifying purchases. Some book links below are affiliate links.*
+
 ## Table of Contents
 
 - [Introduction to Computer Science](#introduction-to-computer-science-1-2-weeks)
@@ -66,7 +68,7 @@ A completely free program to learn computer science course by course
 
 - [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 - [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Free video lectures)
-- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) (Paid, the classic CLRS textbook)
+- [Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein](https://www.amazon.ca/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Computer Architecture and Systems (8-12 weeks)
 
@@ -118,7 +120,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle)
-- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959) (Paid)
+- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Artificial Intelligence and Machine Learning
 
@@ -149,7 +151,7 @@ A completely free program to learn computer science course by course
 
 - [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics)
 - [Learn OpenGL](https://learnopengl.com/) (Free graphics programming tutorials)
-- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) (Paid, companion site has free resources)
+- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.amazon.ca/Real-Time-Rendering-Fourth-Tomas-Akenine-M%C3%B6ller/dp/1138627003?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Human-Computer Interaction (8-12 weeks)
 
@@ -163,7 +165,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Interaction Design Specialization by University of California San Diego on Coursera](https://www.coursera.org/specializations/interaction-design)
-- [Don't Make Me Think by Steve Krug](https://www.sensible.com/dont-make-me-think/) (Paid)
+- [Don't Make Me Think, Revisited by Steve Krug](https://www.amazon.ca/Dont-Make-Think-Revisited-Usability/dp/0321965515?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Cybersecurity (8-12 weeks)
 
@@ -214,7 +216,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.com/Code-Silicon-Valley-Remaking-America/dp/0399562184) (Paid)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
