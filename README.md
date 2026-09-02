@@ -54,6 +54,7 @@ A low-cost program to learn computer science course by course
 
 - [Python for Everybody by University of Michigan on Coursera](https://www.coursera.org/specializations/python) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Automate the Boring Stuff with Python (print edition) by Al Sweigart](https://www.amazon.ca/Automate-Boring-Stuff-Python-3rd/dp/1718503407?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Data Structures and Algorithms (12-16 weeks)
 
@@ -85,6 +86,7 @@ A low-cost program to learn computer science course by course
 
 - [Computer Architecture by Princeton University on Coursera](https://www.coursera.org/learn/comparch) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [Operating Systems: Three Easy Pieces by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](http://pages.cs.wisc.edu/~remzi/OSTEP/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Operating Systems: Three Easy Pieces (print edition)](https://www.amazon.ca/Operating-Systems-Three-Easy-Pieces/dp/198508659X?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Database Systems (8-12 weeks)
 
@@ -139,6 +141,7 @@ A low-cost program to learn computer science course by course
 
 - [Machine Learning Specialization by Andrew Ng (DeepLearning.AI/Stanford) on Coursera](https://www.coursera.org/learn/machine-learning) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [Deep Learning by Yoshua Bengio, Ian Goodfellow, and Aaron Courville](https://www.deeplearningbook.org/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Deep Learning (print edition) by Ian Goodfellow, Yoshua Bengio, and Aaron Courville](https://www.amazon.ca/Deep-Learning-Ian-Goodfellow/dp/0262035618?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Computer Graphics and Visualization (8-12 weeks)
 
@@ -152,7 +155,8 @@ A low-cost program to learn computer science course by course
 **Resources:**
 
 - [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
-- [Learn OpenGL](https://learnopengl.com/) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Learn OpenGL](https://learnopengl.com/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Learn OpenGL (print edition) by Joey de Vries](https://www.amazon.ca/dp/9090332561?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 - [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.amazon.ca/Real-Time-Rendering-Fourth-Tomas-Akenine-M%C3%B6ller/dp/1138627003?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Human-Computer Interaction (8-12 weeks)
@@ -181,6 +185,7 @@ A low-cost program to learn computer science course by course
 
 - [Introduction to Cyber Security Specialization by New York University on Coursera](https://www.coursera.org/specializations/intro-cyber-security) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/~rja14/book.html) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Security Engineering (print edition) by Ross J. Anderson](https://www.amazon.ca/Security-Engineering-Building-Dependable-Distributed/dp/1119642787?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Software Development Tools (4-6 weeks)
 
