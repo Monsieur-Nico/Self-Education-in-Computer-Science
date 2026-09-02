@@ -87,7 +87,7 @@ A low-cost program to learn computer science course by course
 **Resources:**
 
 - [ ] [Computer Architecture by Princeton University on Coursera](https://www.coursera.org/learn/comparch) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
-- [ ] [Operating Systems: Three Easy Pieces by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](http://pages.cs.wisc.edu/~remzi/OSTEP/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [ ] [Operating Systems: Three Easy Pieces by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](https://pages.cs.wisc.edu/~remzi/OSTEP/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [ ] [Operating Systems: Three Easy Pieces (print edition)](https://www.amazon.ca/Operating-Systems-Three-Easy-Pieces/dp/198508659X?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Database Systems (8-12 weeks)
@@ -100,7 +100,7 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [ ] [Introduction to SQL by Harvard University (CS50) on edX](https://www.edx.org/learn/sql/harvard-university-cs50-s-introduction-to-sql) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [ ] [Introduction to Databases with SQL by Harvard University (CS50) on edX](https://www.edx.org/learn/sql/harvard-university-cs50-s-introduction-to-databases-with-sql) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [ ] [SQLBolt](https://sqlbolt.com/) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Web Development (8-12 weeks)
@@ -186,7 +186,7 @@ A low-cost program to learn computer science course by course
 **Resources:**
 
 - [ ] [Introduction to Cyber Security Specialization by New York University on Coursera](https://www.coursera.org/specializations/intro-cyber-security) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
-- [ ] [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/~rja14/book.html) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [ ] [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/archive/rja14/book.html) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [ ] [Security Engineering (print edition) by Ross J. Anderson](https://www.amazon.ca/Security-Engineering-Building-Dependable-Distributed/dp/1119642787?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Software Development Tools (4-6 weeks)
@@ -198,7 +198,7 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [ ] [About Git by GitHub Docs](https://docs.github.com/get-started/using-git/about-git) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [ ] [About Git by GitHub Docs](https://docs.github.com/en/get-started/using-git/about-git) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 - [ ] [Eclipse IDE Tutorial by Vogella](https://www.vogella.com/tutorials/Eclipse/article.html) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Mathematics for Computer Science (8-12 weeks)
@@ -212,7 +212,7 @@ A low-cost program to learn computer science course by course
 **Resources:**
 
 - [ ] [Mathematics for Computer Science (6.1200J) by Massachusetts Institute of Technology on MIT OpenCourseWare](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
-- [ ] [Linear Algebra by Gilbert Strang on MIT OpenCourseWare](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [ ] [Linear Algebra by Gilbert Strang on MIT OpenCourseWare](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Ethics and Society in Computing (8-12 weeks)
 
