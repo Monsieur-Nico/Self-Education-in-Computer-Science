@@ -1,3 +1,5 @@
+<a id="readme-title"></a>
+
 # Self-Education in Computer Science
 
 [![License](https://img.shields.io/github/license/Monsieur-Nico/Self-Education-in-Computer-Science?color=42b983)](LICENSE)

@@ -16,4 +16,4 @@
 </p>
 
 [GitHub](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science)
-[Get Started](README.md#table-of-contents)
+[Get Started](README.md#readme-title)
