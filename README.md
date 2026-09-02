@@ -68,7 +68,7 @@ A completely free program to learn computer science course by course
 
 - [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 - [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Free video lectures)
-- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange)
+- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange)
 
 ## Computer Architecture and Systems (8-12 weeks)
 
@@ -120,7 +120,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle)
-- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange) ![Amazon](/assets/badge-amazon.svg)
+- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Artificial Intelligence and Machine Learning
 
@@ -151,7 +151,7 @@ A completely free program to learn computer science course by course
 
 - [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics)
 - [Learn OpenGL](https://learnopengl.com/) (Free graphics programming tutorials)
-- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange)
+- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange)
 
 ## Human-Computer Interaction (8-12 weeks)
 
@@ -165,7 +165,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Interaction Design Specialization by University of California San Diego on Coursera](https://www.coursera.org/specializations/interaction-design)
-- [Don't Make Me Think by Steve Krug](https://www.sensible.com/dont-make-me-think/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange)
+- [Don't Make Me Think by Steve Krug](https://www.sensible.com/dont-make-me-think/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange)
 
 ## Cybersecurity (8-12 weeks)
 
@@ -216,7 +216,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange) ![Amazon](/assets/badge-amazon.svg)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
