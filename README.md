@@ -68,28 +68,9 @@ A low-cost program to learn computer science course by course
 | [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71) | Book | ≈17-22 hrs (672 pages) | **Companion** — practical, project-based practice to apply what the course teaches |
 | [Automate the Boring Stuff with Python (print edition) by Al Sweigart](https://www.amazon.ca/Automate-Boring-Stuff-Python-3rd/dp/1718503407?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg) | Book | ≈17-22 hrs | Physical copy of the companion above |
 
-## Data Structures and Algorithms (12-16 weeks)
+## [Data Structures and Algorithms](sections/data-structures-and-algorithms.md) (12-16 weeks)
 
-- [ ] Mark complete when you've finished this section
-
-> 📋 **Prerequisites:** [Programming Fundamentals](#programming-fundamentals-4-6-weeks)
-
-- Basic data structures (arrays, linked lists, stacks, queues)
-- Advanced data structures (trees, graphs, hash tables)
-- Algorithm analysis and design
-- Searching and sorting algorithms
-- Recursion
-- Dynamic programming
-- Greedy algorithms
-- Divide and conquer algorithms
-
-**Resources:**
-
-| Resource | Format | Est. Time | Role |
-|---|---|---|---|
-| [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71) | Course | ≈180 hrs (≈5 months @ 10 hrs/wk) | **Primary** — structured path through this section |
-| [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71) | Video | ≈21 hrs of lectures | **Alternative** — prefer straight video lectures over an interactive platform? Use this instead of the Coursera specialization |
-| [Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein](https://www.amazon.ca/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg) | Book | Reference — not meant to be read linearly | **Companion** — more rigor/detail than either option above; use alongside or after |
+How to organize data efficiently and design algorithms that scale — the foundation for technical interviews and for writing code that stays fast as it grows. [See what to expect and prepare →](sections/data-structures-and-algorithms.md)
 
 ## Computer Architecture and Systems (8-12 weeks)
 

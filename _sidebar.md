@@ -11,6 +11,7 @@
     - [Debugging and Error Handling](programming-fundamentals/debugging_and_error_handling.md)
     - [Object-Oriented Programming](programming-fundamentals/object_oriented_programming.md)
   - [Data Structures and Algorithms](/#data-structures-and-algorithms-12-16-weeks)
+    - [What to Expect and Prepare](sections/data-structures-and-algorithms.md)
   - [Computer Architecture and Systems](/#computer-architecture-and-systems-8-12-weeks)
   - [Database Systems](/#database-systems-8-12-weeks)
   - [Web Development](/#web-development-8-12-weeks)
