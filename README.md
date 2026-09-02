@@ -68,7 +68,7 @@ A completely free program to learn computer science course by course
 
 - [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 - [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Free video lectures)
-- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange) (the classic CLRS textbook)
+- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange)
 
 ## Computer Architecture and Systems (8-12 weeks)
 
@@ -151,7 +151,7 @@ A completely free program to learn computer science course by course
 
 - [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics)
 - [Learn OpenGL](https://learnopengl.com/) (Free graphics programming tutorials)
-- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange) (companion site has free resources)
+- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange)
 
 ## Human-Computer Interaction (8-12 weeks)
 
