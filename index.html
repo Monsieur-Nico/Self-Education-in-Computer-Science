@@ -7,20 +7,246 @@
   <meta name="description" content="A low-cost program to learn computer science course by course">
   <meta name="impact-site-verification" value="96762337-4086-4f5e-b2ef-895f09b823b7">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
   <style>
-    /* Lock the cover page background to a fixed gradient. Docsify's default
-       coverpage picks a random pastel gradient on every page load (via
-       inline style), which reads as inconsistent rather than intentional -
-       !important is needed to win over that inline style. */
+    /* ---- Dark "techy" theme -----------------------------------------
+       Overrides the default light Vue theme with a dark, high-contrast
+       palette more in line with a CS/dev-tooling site. Docsify's own
+       theme uses var(--theme-color) throughout (buttons, links, active
+       sidebar item, search highlight, progress bar), so setting that
+       one variable does most of the accent-color work automatically;
+       everything else below covers backgrounds, text, and surfaces
+       that the base theme hardcodes to light colors. */
+    :root {
+      --theme-color: #22d3ee;
+      --accent-2: #a855f7;
+      --bg: #0b0f19;
+      --bg-cover: #05070d;
+      --surface: #10162280;
+      --text: #e8ecf3;
+      --text-body: #c3cbd6;
+      --text-dim: #8b95a7;
+      --border: rgba(148, 163, 184, 0.16);
+    }
+
+    * {
+      font-family: 'Inter', 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-body);
+    }
+
+    ::selection {
+      background: rgba(34, 211, 238, 0.3);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.25);
+      border-radius: 6px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: var(--bg);
+      color: var(--text-dim);
+      border-right: 1px solid var(--border);
+    }
+
+    .sidebar > h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .sidebar ul li a {
+      color: var(--text-dim);
+    }
+
+    .sidebar ul li a:hover {
+      color: var(--text);
+    }
+
+    .sidebar ul li.active > a {
+      color: var(--theme-color);
+      text-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+
+    .sidebar:hover::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.3);
+    }
+
+    .search input {
+      background-color: var(--surface) !important;
+      border: 1px solid var(--border) !important;
+      color: var(--text) !important;
+      border-radius: 6px !important;
+    }
+
+    .search input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .search h2 {
+      color: var(--text-dim);
+    }
+
+    .search .matching-post {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .search .matching-post p {
+      color: var(--text-dim);
+    }
+
+    .sidebar-toggle {
+      background-color: rgba(11, 15, 25, 0.85) !important;
+    }
+
+    .sidebar-toggle span {
+      background-color: var(--theme-color);
+    }
+
+    /* Content */
+    .content {
+      background-color: var(--bg);
+    }
+
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4,
+    .markdown-section strong {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+    }
+
+    .markdown-section h1 {
+      background: linear-gradient(90deg, var(--theme-color), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .markdown-section h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    .markdown-section h6 {
+      color: var(--text-dim);
+    }
+
+    .markdown-section p,
+    .markdown-section li {
+      color: var(--text-body);
+    }
+
+    .markdown-section a {
+      color: var(--theme-color);
+    }
+
+    .markdown-section a:hover {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    .markdown-section hr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .markdown-section table td,
+    .markdown-section table th {
+      border: 1px solid var(--border);
+    }
+
+    .markdown-section table tr {
+      background-color: transparent;
+      border-top: 1px solid var(--border);
+    }
+
+    .markdown-section table tr:nth-child(2n) {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .markdown-section code {
+      background: rgba(148, 163, 184, 0.14);
+      color: #7dd3fc;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+
+    .markdown-section pre {
+      background: #0f1420;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .markdown-section pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .github-corner svg {
+      color: var(--bg);
+    }
+
+    .app-nav a {
+      color: var(--text-dim);
+    }
+
+    /* Cover page: dark gradient + faint circuit grid + glow blobs, in
+       place of Docsify's random light pastel gradient (locked with
+       !important to override that inline style - see note below). */
     .cover.show {
-      background: linear-gradient(to left bottom, hsl(160, 100%, 88%) 0%, hsl(210, 100%, 88%) 100%) !important;
+      background-color: var(--bg-cover) !important;
+      background-image:
+        linear-gradient(rgba(34, 211, 238, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
+        radial-gradient(circle at 18% 20%, rgba(34, 211, 238, 0.22), transparent 42%),
+        radial-gradient(circle at 82% 28%, rgba(168, 85, 247, 0.2), transparent 45%),
+        linear-gradient(180deg, #05070d 0%, #0b0f19 100%) !important;
+      background-size: 44px 44px, 44px 44px, auto, auto, auto !important;
+    }
+
+    .cover, .cover-main {
+      color: var(--text);
+    }
+
+    section.cover blockquote {
+      color: var(--text-dim);
+    }
+
+    section.cover .cover-main > p:last-child a {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    section.cover .cover-main > p:last-child a:last-child {
+      box-shadow: 0 0 24px rgba(34, 211, 238, 0.45);
     }
 
     .cover-icon {
       font-size: 4.5rem;
       line-height: 1;
       margin: 0 0 0.2em;
-      filter: drop-shadow(0 6px 14px rgba(52, 73, 94, 0.25));
+      filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.55)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.3));
     }
 
     .cover-badges {
