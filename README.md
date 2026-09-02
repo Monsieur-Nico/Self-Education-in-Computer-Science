@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/Monsieur-Nico/Self-Education-in-Computer-Science?color=42b983)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Monsieur-Nico/Self-Education-in-Computer-Science?color=42b983)](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/commits/main)
 
-A completely free program to learn computer science course by course
+A low-cost program to learn computer science course by course
 
 📖 **[Browse the interactive site](https://monsieur-nico.github.io/Self-Education-in-Computer-Science/)** — searchable, with sidebar navigation.
 
