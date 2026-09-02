@@ -9,6 +9,8 @@ A low-cost program to learn computer science course by course
 
 *As an Amazon Associate I earn from qualifying purchases. Some book links below are affiliate links.*
 
+**Legend:** ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) Course &nbsp; ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) Video &nbsp; ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) Book &nbsp; ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) PDF &nbsp; ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) Tutorial &nbsp; ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71) Free &nbsp; ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) Paid &nbsp; ![Amazon](/assets/badge-amazon.svg) Amazon
+
 ## Table of Contents
 
 - [Introduction to Computer Science](#introduction-to-computer-science-1-2-weeks)
@@ -35,8 +37,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Introduction to Computer Science by Harvard University on edX](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science)
-- [Codecademy's Learn How to Code Course](https://www.codecademy.com/learn/paths/computer-science)
+- [Introduction to Computer Science by Harvard University on edX](https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Codecademy's Learn How to Code Course](https://www.codecademy.com/learn/paths/computer-science) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Programming Fundamentals (4-6 weeks)
 
@@ -50,8 +52,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Python for Everybody by University of Michigan on Coursera](https://www.coursera.org/specializations/python)
-- [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/) (Free, full text online)
+- [Python for Everybody by University of Michigan on Coursera](https://www.coursera.org/specializations/python) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Data Structures and Algorithms (12-16 weeks)
 
@@ -66,9 +68,9 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
-- [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Free video lectures)
-- [Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein](https://www.amazon.ca/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
+- [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein](https://www.amazon.ca/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Computer Architecture and Systems (8-12 weeks)
 
@@ -81,8 +83,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Computer Architecture by Princeton University on Coursera](https://www.coursera.org/learn/comparch)
-- [Operating Systems: Three Easy Pieces by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](http://pages.cs.wisc.edu/~remzi/OSTEP/)
+- [Computer Architecture by Princeton University on Coursera](https://www.coursera.org/learn/comparch) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Operating Systems: Three Easy Pieces by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau](http://pages.cs.wisc.edu/~remzi/OSTEP/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Database Systems (8-12 weeks)
 
@@ -94,8 +96,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Introduction to SQL by Harvard University (CS50) on edX](https://www.edx.org/learn/sql/harvard-university-cs50-s-introduction-to-sql)
-- [SQLBolt](https://sqlbolt.com/) (Online interactive SQL tutorials)
+- [Introduction to SQL by Harvard University (CS50) on edX](https://www.edx.org/learn/sql/harvard-university-cs50-s-introduction-to-sql) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [SQLBolt](https://sqlbolt.com/) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Web Development (8-12 weeks)
 
@@ -106,8 +108,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [The Odin Project](https://www.theodinproject.com/) (Free full-stack web development curriculum)
-- [FreeCodeCamp](https://www.freecodecamp.org/) (Free web development curriculum)
+- [The Odin Project](https://www.theodinproject.com/) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [FreeCodeCamp](https://www.freecodecamp.org/) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Software Engineering (8-12 weeks)
 
@@ -119,8 +121,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle)
-- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
+- [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Artificial Intelligence and Machine Learning
 
@@ -135,8 +137,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Machine Learning Specialization by Andrew Ng (DeepLearning.AI/Stanford) on Coursera](https://www.coursera.org/learn/machine-learning)
-- [Deep Learning by Yoshua Bengio, Ian Goodfellow, and Aaron Courville](https://www.deeplearningbook.org/)
+- [Machine Learning Specialization by Andrew Ng (DeepLearning.AI/Stanford) on Coursera](https://www.coursera.org/learn/machine-learning) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Deep Learning by Yoshua Bengio, Ian Goodfellow, and Aaron Courville](https://www.deeplearningbook.org/) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Computer Graphics and Visualization (8-12 weeks)
 
@@ -149,9 +151,9 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics)
-- [Learn OpenGL](https://learnopengl.com/) (Free graphics programming tutorials)
-- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.amazon.ca/Real-Time-Rendering-Fourth-Tomas-Akenine-M%C3%B6ller/dp/1138627003?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
+- [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Learn OpenGL](https://learnopengl.com/) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.amazon.ca/Real-Time-Rendering-Fourth-Tomas-Akenine-M%C3%B6ller/dp/1138627003?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Human-Computer Interaction (8-12 weeks)
 
@@ -164,8 +166,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Interaction Design Specialization by University of California San Diego on Coursera](https://www.coursera.org/specializations/interaction-design)
-- [Don't Make Me Think, Revisited by Steve Krug](https://www.amazon.ca/Dont-Make-Think-Revisited-Usability/dp/0321965515?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
+- [Interaction Design Specialization by University of California San Diego on Coursera](https://www.coursera.org/specializations/interaction-design) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Don't Make Me Think, Revisited by Steve Krug](https://www.amazon.ca/Dont-Make-Think-Revisited-Usability/dp/0321965515?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Cybersecurity (8-12 weeks)
 
@@ -177,8 +179,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Introduction to Cyber Security Specialization by New York University on Coursera](https://www.coursera.org/specializations/intro-cyber-security)
-- [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/~rja14/book.html) (Free, full text online)
+- [Introduction to Cyber Security Specialization by New York University on Coursera](https://www.coursera.org/specializations/intro-cyber-security) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Security Engineering by Ross J. Anderson](https://www.cl.cam.ac.uk/~rja14/book.html) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![PDF](https://img.shields.io/badge/-%F0%9F%93%84-616161) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Software Development Tools (4-6 weeks)
 
@@ -189,8 +191,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [About Git by GitHub Docs](https://docs.github.com/get-started/using-git/about-git)
-- [Eclipse IDE Tutorial by Vogella](https://www.vogella.com/tutorials/Eclipse/article.html)
+- [About Git by GitHub Docs](https://docs.github.com/get-started/using-git/about-git) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Eclipse IDE Tutorial by Vogella](https://www.vogella.com/tutorials/Eclipse/article.html) ![Tutorial](https://img.shields.io/badge/-%F0%9F%A7%AD-8E44AD) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Mathematics for Computer Science (8-12 weeks)
 
@@ -202,8 +204,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Mathematics for Computer Science (6.1200J) by Massachusetts Institute of Technology on MIT OpenCourseWare](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/)
-- [Linear Algebra by Gilbert Strang on MIT OpenCourseWare](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
+- [Mathematics for Computer Science (6.1200J) by Massachusetts Institute of Technology on MIT OpenCourseWare](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [Linear Algebra by Gilbert Strang on MIT OpenCourseWare](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/) ![Video](https://img.shields.io/badge/-%F0%9F%8E%A5-E74C3C) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
 
 ## Ethics and Society in Computing (8-12 weeks)
 
@@ -215,8 +217,8 @@ A low-cost program to learn computer science course by course
 
 **Resources:**
 
-- [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
+- [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering) ![Course](https://img.shields.io/badge/-%F0%9F%8E%93-2E86DE) ![Free](https://img.shields.io/badge/-%F0%9F%86%93-2ECC71)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) ![Book](https://img.shields.io/badge/-%F0%9F%93%96-16A085) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
