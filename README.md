@@ -68,7 +68,7 @@ A completely free program to learn computer science course by course
 
 - [Data Structures and Algorithms Specialization by University of California, San Diego on Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 - [Introduction to Algorithms (6.006) by MIT OpenCourseWare](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) (Free video lectures)
-- [Introduction to Algorithms by MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange)
+- [Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein](https://www.amazon.ca/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Computer Architecture and Systems (8-12 weeks)
 
@@ -151,7 +151,7 @@ A completely free program to learn computer science course by course
 
 - [Interactive Computer Graphics by University of Tokyo on Coursera](https://www.coursera.org/learn/interactive-computer-graphics)
 - [Learn OpenGL](https://learnopengl.com/) (Free graphics programming tutorials)
-- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.realtimerendering.com/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange)
+- [Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman](https://www.amazon.ca/Real-Time-Rendering-Fourth-Tomas-Akenine-M%C3%B6ller/dp/1138627003?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Human-Computer Interaction (8-12 weeks)
 
@@ -165,7 +165,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Interaction Design Specialization by University of California San Diego on Coursera](https://www.coursera.org/specializations/interaction-design)
-- [Don't Make Me Think by Steve Krug](https://www.sensible.com/dont-make-me-think/) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange)
+- [Don't Make Me Think, Revisited by Steve Krug](https://www.amazon.ca/Dont-Make-Think-Revisited-Usability/dp/0321965515?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Cybersecurity (8-12 weeks)
 
