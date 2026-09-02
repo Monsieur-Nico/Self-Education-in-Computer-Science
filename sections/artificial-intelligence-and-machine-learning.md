@@ -19,7 +19,7 @@ The sub-estimates you'll see in some ML course syllabi (a few weeks per topic) a
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks), [Mathematics for Computer Science](/#mathematics-for-computer-science-8-12-weeks) — specifically linear algebra and probability/statistics. Without them, the material becomes memorization instead of understanding.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks), [Mathematics for Computer Science](../README.md#mathematics-for-computer-science-8-12-weeks) — specifically linear algebra and probability/statistics. Without them, the material becomes memorization instead of understanding.
 
 A few things worth knowing going in:
 

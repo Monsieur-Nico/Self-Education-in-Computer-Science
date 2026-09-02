@@ -17,7 +17,7 @@ Computer networks and distributed systems get lighter treatment here than the ot
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks) — you don't need anything beyond solid basics; this section builds conceptual understanding more than it demands new coding skill.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks) — you don't need anything beyond solid basics; this section builds conceptual understanding more than it demands new coding skill.
 
 A few things worth knowing going in:
 

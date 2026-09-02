@@ -17,7 +17,7 @@ Expect this to be implementation-heavy once you're past the initial theory — y
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks), [Mathematics for Computer Science](/#mathematics-for-computer-science-8-12-weeks) — linear algebra especially. Transformations and projections in this section are directly built on matrix and vector math.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks), [Mathematics for Computer Science](../README.md#mathematics-for-computer-science-8-12-weeks) — linear algebra especially. Transformations and projections in this section are directly built on matrix and vector math.
 
 A few things worth knowing going in:
 

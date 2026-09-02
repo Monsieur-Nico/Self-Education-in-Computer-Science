@@ -16,7 +16,7 @@ SQL itself is a small, learnable language — most of the real difficulty in thi
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks) — no prior database experience needed.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks) — no prior database experience needed.
 
 A few things worth knowing going in:
 

@@ -18,7 +18,7 @@ They're written to be worked through roughly in the order listed — each builds
 
 ## What to Prepare
 
-**Prerequisites:** [Introduction to Computer Science](/#introduction-to-computer-science-8-12-weeks) — you should already have Python installed and have written at least a few short programs.
+**Prerequisites:** [Introduction to Computer Science](../README.md#introduction-to-computer-science-8-12-weeks) — you should already have Python installed and have written at least a few short programs.
 
 A few things worth knowing going in:
 

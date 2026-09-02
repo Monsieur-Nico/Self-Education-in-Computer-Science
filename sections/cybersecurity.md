@@ -16,7 +16,7 @@ Expect a mix of conceptual material (how cryptographic primitives work, why a gi
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks), [Computer Architecture and Systems](/#computer-architecture-and-systems-8-12-weeks) — you need a working mental model of how operating systems and networks function before you can reason about how they get attacked.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks), [Computer Architecture and Systems](../README.md#computer-architecture-and-systems-8-12-weeks) — you need a working mental model of how operating systems and networks function before you can reason about how they get attacked.
 
 A few things worth knowing going in:
 
