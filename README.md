@@ -120,7 +120,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Software Development Lifecycle Specialization by University of Colorado Boulder on Coursera](https://www.coursera.org/specializations/software-development-lifecycle)
-- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) (Paid, Amazon affiliate link)
+- [The Mythical Man-Month by Frederick P. Brooks Jr.](https://www.amazon.ca/dp/0201835959?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange) ![Amazon](/assets/badge-amazon.svg)
 
 ## Artificial Intelligence and Machine Learning
 
@@ -216,7 +216,7 @@ A completely free program to learn computer science course by course
 **Resources:**
 
 - [Ethics, Technology and Engineering by Eindhoven University of Technology on Coursera](https://www.coursera.org/learn/ethics-technology-engineering)
-- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) (Paid, Amazon affiliate link)
+- [The Code: Silicon Valley and the Remaking of America by Margaret O'Mara](https://www.amazon.ca/dp/0399562184?tag=cs-gh-20) ![Paid](https://img.shields.io/badge/-%F0%9F%92%B0_Paid-orange) ![Amazon](/assets/badge-amazon.svg)
 
 Hope this will be beneficial to all of the readers as much as it has been beneficial for me as well.
 Please keep in mind all the estimated times to finish these courses are based on having a full-time job while studying.
