@@ -10,6 +10,8 @@ Thanks for considering a contribution! This project is a curated, low-cost compu
 
 Pick the matching template when you [open a new issue](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/issues/new/choose) — it'll ask for exactly what we need (link, section, why) to act on it quickly.
 
+**Want to propose a whole new top-level section** (not just a resource within an existing one) — e.g. a topic area the curriculum doesn't cover at all yet? That's a bigger, more open-ended idea than the resource-suggestion form is built for. Post it in [Discussions → Ideas](https://github.com/Monsieur-Nico/Self-Education-in-Computer-Science/discussions/categories/ideas) instead, so it can be talked through before committing to a structure.
+
 ## What we're looking for in resource suggestions
 
 - **Prefer free or low-cost resources.** This curriculum's whole point is affordability. A paid resource is fine as a supplementary option, but each section should have at least one genuinely free primary option.
