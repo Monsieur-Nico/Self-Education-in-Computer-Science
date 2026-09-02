@@ -20,14 +20,19 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          # Scan every markdown file. Amazon is excluded because it blocks
-          # automated/bot traffic (returns 500s even for live listings),
-          # which would produce false "broken" reports - those links are
-          # verified manually instead. A realistic user agent and a couple
-          # of retries cut down on other transient false positives.
+          # Scan every markdown file. --root-dir tells lychee how to resolve
+          # our root-relative links (/assets/badge-amazon.svg,
+          # /programming-fundamentals/*.md, the /#anchor links in
+          # _coverpage.md and _sidebar.md) against the repo root instead of
+          # reporting them as unresolvable. Amazon is excluded because it
+          # blocks automated/bot traffic (returns 500s even for live
+          # listings), which would produce false "broken" reports - those
+          # links are verified manually instead. A realistic user agent and
+          # a couple of retries cut down on other transient false positives.
           args: >-
             --no-progress
             --verbose
+            --root-dir "${{ github.workspace }}"
             --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
             --max-retries 2
             --exclude 'amazon\.(com|ca)'
