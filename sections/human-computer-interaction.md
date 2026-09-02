@@ -17,7 +17,7 @@ This is one of the lightest-prerequisite sections in the curriculum — it's pla
 
 ## What to Prepare
 
-**Prerequisites:** [Introduction to Computer Science](/#introduction-to-computer-science-8-12-weeks) — that's it. This section is intentionally accessible early; it doesn't build on the programming-heavy sections the way most others do.
+**Prerequisites:** [Introduction to Computer Science](../README.md#introduction-to-computer-science-8-12-weeks) — that's it. This section is intentionally accessible early; it doesn't build on the programming-heavy sections the way most others do.
 
 A few things worth knowing going in:
 

@@ -16,7 +16,7 @@ This section is less about new technical skills and more about process and judgm
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks), [Data Structures and Algorithms](/#data-structures-and-algorithms-12-16-weeks) — you should have written enough code by now to have personally experienced a project getting messy as it grew.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks), [Data Structures and Algorithms](../README.md#data-structures-and-algorithms-12-16-weeks) — you should have written enough code by now to have personally experienced a project getting messy as it grew.
 
 A few things worth knowing going in:
 

@@ -15,7 +15,7 @@ This is one of the more open-ended sections — "web development" covers a lot o
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks), [Database Systems](/#database-systems-8-12-weeks) — the database integration topics in this section assume you already know basic SQL.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks), [Database Systems](../README.md#database-systems-8-12-weeks) — the database integration topics in this section assume you already know basic SQL.
 
 A few things worth knowing going in:
 

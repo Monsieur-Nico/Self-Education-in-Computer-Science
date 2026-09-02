@@ -19,7 +19,7 @@ This section is also the one most directly tied to technical interviews — if t
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks) — you should be comfortable writing your own functions, using loops and conditionals, and debugging code you didn't just copy from a tutorial before starting here.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks) — you should be comfortable writing your own functions, using loops and conditionals, and debugging code you didn't just copy from a tutorial before starting here.
 
 A few things worth knowing going in:
 

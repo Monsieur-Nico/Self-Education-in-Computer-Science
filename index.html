@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="description" content="A low-cost program to learn computer science course by course">
   <meta name="impact-site-verification" value="96762337-4086-4f5e-b2ef-895f09b823b7">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -232,8 +235,23 @@
       color: var(--text);
     }
 
+    /* Docsify's default cover title weighs in at 300 (thin) - fine on a
+       plain background, but it all but disappears against the grid +
+       glow behind it here. Bolding it and reusing the same gradient
+       clip as every in-page h1 gives it real presence instead. */
+    .cover-main h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700 !important;
+      letter-spacing: -0.01em;
+      background: linear-gradient(90deg, var(--theme-color), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     section.cover blockquote {
       color: var(--text-dim);
+      font-size: 1.15rem;
     }
 
     section.cover .cover-main > p:last-child a {
@@ -245,19 +263,66 @@
     }
 
     .cover-icon {
-      font-size: 4.5rem;
-      line-height: 1;
-      margin: 0 0 0.2em;
+      display: block;
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 0.5em;
       filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.55)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.3));
     }
 
+    /* Concrete facts up top, in the same pill language as the wheel nav
+       (see assets/wheel-nav.css), so the very first screen backs up the
+       tagline with specifics instead of only a mission statement. */
+    .cover-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 1.4em 0 0;
+    }
+
+    .cover-stats span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      background: #161c2c;
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      border-radius: 999px;
+      padding: 0.4em 0.9em;
+    }
+
     .cover-badges {
-      margin: 0.5em 0 1.5em;
+      margin: 1.5em 0 1.5em;
     }
 
     .cover-badges img {
       margin: 0 4px;
       vertical-align: middle;
+    }
+
+    /* A single orchestrated entrance (icon, title, tagline, stats,
+       badges, then the buttons) reads as considered; each element still
+       just fades and settles in place, nothing moves far or bounces. */
+    @keyframes cover-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cover-main > * {
+      animation: cover-in 700ms cubic-bezier(.22,.8,.32,1) both;
+    }
+
+    .cover-main > *:nth-child(1) { animation-delay: 0ms; }
+    .cover-main > *:nth-child(2) { animation-delay: 90ms; }
+    .cover-main > *:nth-child(3) { animation-delay: 160ms; }
+    .cover-main > *:nth-child(4) { animation-delay: 230ms; }
+    .cover-main > *:nth-child(5) { animation-delay: 300ms; }
+    .cover-main > *:nth-child(6) { animation-delay: 360ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cover-main > * {
+        animation: none;
+      }
     }
 
   </style>

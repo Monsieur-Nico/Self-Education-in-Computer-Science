@@ -15,7 +15,7 @@ Realistically, you've probably already been using Git and an editor informally s
 
 ## What to Prepare
 
-**Prerequisites:** [Programming Fundamentals](/#programming-fundamentals-4-6-weeks) — you should already be comfortable running your own code; this section is about the tooling around that, not programming itself.
+**Prerequisites:** [Programming Fundamentals](../README.md#programming-fundamentals-4-6-weeks) — you should already be comfortable running your own code; this section is about the tooling around that, not programming itself.
 
 A few things worth knowing going in:
 
